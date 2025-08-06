@@ -8,7 +8,7 @@
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>CompareContourScript</RootNamespace>
-    <AssemblyName>CompareContourScript19.esapi</AssemblyName>
+    <AssemblyName>CompareContourScript23.esapi</AssemblyName>
     <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <UseWPF>true</UseWPF>
     <FileAlignment>512</FileAlignment>
