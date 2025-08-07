@@ -18,7 +18,7 @@
                 <Label MaxWidth="450">
                     <TextBlock Text="Please report any bug to yeap.ping.lin@nccs.com.sg." TextWrapping="Wrap"/>
                 </Label>
-                <Label Content="Updated Aug 2025. Powered by NCCS DRO Physics."/>
+                <Label Content="Powered by NCCS DRO Physics. Updated Aug 2025."/>
                 <Separator Margin="10"/>
                 <TextBlock x:Name="PatientDetailsText" FontSize="14" Margin="0,0,0,10"/>
                 <Grid Margin="0,5">
@@ -28,13 +28,13 @@
                     </Grid.ColumnDefinitions>
                     <Label Grid.Column="0"
                            Content="Select Structure Set 1:"
-                           Margin="10,10,10,10"
+                           Margin="10,5,10,5"
                            VerticalAlignment="Top" 
                            HorizontalAlignment="Left"/>
                     <ComboBox Grid.Column="1"
                            x:Name="StructureSetComboBox1"
                            Width="200"
-                           Margin="10"
+                           Margin="5"
                            VerticalAlignment="Top" />
                 </Grid>
                 <Grid Margin="0,5">
@@ -44,16 +44,16 @@
                     </Grid.ColumnDefinitions>
                     <Label Grid.Column="0"
                            Content="Select Structure Set 2:"
-                           Margin="10,10,10,10"
+                           Margin="10,5,10,5"
                            VerticalAlignment="Top"
                            HorizontalAlignment="Left"/>
                     <ComboBox Grid.Column="1"
                               x:Name="StructureSetComboBox2"
                               Width="200"
-                              Margin="10"
+                              Margin="5"
                               VerticalAlignment="Top" />
                 </Grid>
-                <Button Content="Compare contours" Width="200" Margin="10" Click="CompareButton_Click" HorizontalAlignment="Center"/>
+                <Button Content="Compare contours" Width="200" Margin="5" Click="CompareButton_Click" HorizontalAlignment="Center"/>
             </StackPanel>
         </Grid>
         <DataGrid Grid.Row="1"
@@ -66,6 +66,6 @@
                 <DataGridTextColumn Header="DSC" Binding="{Binding DiceCoefficient, StringFormat=F3}" Width="150"/>
                 </DataGrid.Columns>
         </DataGrid>
-        <Button Grid.Row="2" Content="Close" Width="100" Margin="10" Click="CloseButton_Click" HorizontalAlignment="Center"/>
+        <Button Grid.Row="2" Content="Close" Width="100" Margin="5" Click="CloseButton_Click" HorizontalAlignment="Center"/>
     </Grid>
 </Window>

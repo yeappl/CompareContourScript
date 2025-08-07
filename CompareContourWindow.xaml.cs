@@ -150,7 +150,8 @@ namespace CompareContourScript
                                 p.y = y;
                                 p.z = z;
 
-                                if ((structure2Bounds.Contains(p.x, p.x, p.z)) && (structure1.IsPointInsideSegment(p)) && (structure2.IsPointInsideSegment(p)))
+                                // if ((structure2Bounds.Contains(p.x, p.y, p.z)) && (structure1.IsPointInsideSegment(p)) && (structure2.IsPointInsideSegment(p)))
+                                if ((structure1.IsPointInsideSegment(p)) && (structure2.IsPointInsideSegment(p)))
                                 {
                                     intersectionCount++;
                                 }
