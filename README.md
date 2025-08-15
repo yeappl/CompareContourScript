@@ -74,4 +74,4 @@ When reporting an issue, please include:
 - Steps to reproduce
 
 ## License
-Internal clinical/research use only. Not for commercial distribution.
+Internal research use only. Not for clinical use or commercial distribution.
