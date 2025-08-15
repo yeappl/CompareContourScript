@@ -61,7 +61,7 @@ The script:
 ## Screenshots
 
 ### GUI Interface and Results Table
-![GUI and Results Table Screenshot](CompareContourScreenshot.png)
+![GUI and Results Table Screenshot](CompareContourScreenshot.PNG)
 
 ## Versioning
 | Version | Date       | Author  | Notes                                  |
