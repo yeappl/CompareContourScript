@@ -51,7 +51,7 @@ The script:
 1. Load the script in Eclipse under **Scripting**.
 2. Open a patient with a plan containing at least two relevant structure sets.
 3. Run the script from the scripting menu and select two structure sets.
-4. View results in the displayed table or export to Excel.
+4. View results in the displayed table or copy to Excel.
 
 ## Limitations
 - Only works when **both structure sets are on the same planning CT**.
