@@ -58,6 +58,11 @@ The script:
 - Structures must have **exact same names** to be compared.
 - Requires ESAPI environment; cannot be run standalone.
 
+## Screenshots
+
+### GUI Interface and Results Table
+![GUI and Results Table Screenshot](CompareContourScreenshot.png)
+
 ## Versioning
 | Version | Date       | Author  | Notes                                  |
 |---------|-----------|---------|----------------------------------------|
