@@ -58,5 +58,20 @@ The script:
 - Structures must have **exact same names** to be compared.
 - Requires ESAPI environment; cannot be run standalone.
 
+## Versioning
+| Version | Date       | Author  | Notes                                  |
+|---------|-----------|---------|----------------------------------------|
+| 1.0.0   | 2025-08-15 | PL Y    | Initial release with GUI and table |
+
+## Reporting Issues
+If you find a bug or have suggestions for improvement, please email:  
+📧 **yeap.ping.lin@nccs.com.sg**
+
+When reporting an issue, please include:
+- Script version
+- Eclipse TPS version
+- Brief description of the problem
+- Steps to reproduce
+
 ## License
 Internal clinical/research use only. Not for commercial distribution.
