@@ -1,4 +1,4 @@
-﻿# ESAPI Dice Similarity Coefficient Calculator
+﻿# ESAPI Compare Contour Script
 
 ## Overview
 This ESAPI (Eclipse Scripting API) script calculates the **Dice Similarity Coefficient (DSC)** and **% volume change** relative to Structure 1 between structures with the same name across two structure sets on the **same planning CT**.  
