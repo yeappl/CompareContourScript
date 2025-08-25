@@ -51,13 +51,18 @@ The script:
 1. Load the script in Eclipse under **Scripting**.
 2. Open a patient with a plan containing at least two relevant structure sets.
 3. Run the script from the scripting menu and select two structure sets.
+<<<<<<< HEAD
 4. View results in the displayed table or copy to Excel.
+=======
+4. View results in the displayed table or export to Excel.
+>>>>>>> 3633b5c (Create README.md)
 
 ## Limitations
 - Only works when **both structure sets are on the same planning CT**.
 - Structures must have **exact same names** to be compared.
 - Requires ESAPI environment; cannot be run standalone.
 
+<<<<<<< HEAD
 ## Screenshots
 
 ### GUI Interface and Results Table
@@ -80,3 +85,7 @@ When reporting an issue, please include:
 
 ## License
 Internal research use only. Not for clinical use or commercial distribution.
+=======
+## License
+Internal clinical/research use only. Not for commercial distribution.
+>>>>>>> 3633b5c (Create README.md)

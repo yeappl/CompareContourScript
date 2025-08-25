@@ -26,6 +26,7 @@ namespace CompareContourScript
     {
         public string StructureName { get; set; }
         public double DiceCoefficient { get; set; }
+        public double VolChange { get; set; }
     }
 
     public partial class CompareContourWindow : Window
@@ -88,19 +89,22 @@ namespace CompareContourScript
                 var s1 = ss1.Structures.First(s => s.Id == name);
                 var s2 = ss2.Structures.First(s => s.Id == name);
 
-                double dsc = ComputeDiceCoefficient(s1, s2);
+                var result = ComputeDiceCoefficient(s1, s2);
+                double dsc = result.diceCoefficient;
+                double volChange = result.volChange;
 
                 resultItems.Add(new ContourMatchItem
                 {
                     StructureName = name,
-                    DiceCoefficient = dsc
+                    DiceCoefficient = dsc,
+                    VolChange = volChange
                 });
             }
 
             ResultsGrid.ItemsSource = resultItems;
         }
 
-        private static double ComputeDiceCoefficient(Structure structure1, Structure structure2)
+        private static (double diceCoefficient, double volChange) ComputeDiceCoefficient(Structure structure1, Structure structure2)
         {
             VVector p = new VVector();
             double volumeIntersection = 0;
@@ -110,6 +114,7 @@ namespace CompareContourScript
             int structure1Count = 0;
             int structure2Count = 0;
             double diceCoefficient = 0;
+            double volChange = 0;
 
             Rect3D structure1Bounds = structure1.MeshGeometry.Bounds;
             Rect3D structure2Bounds = structure2.MeshGeometry.Bounds;
@@ -167,12 +172,14 @@ namespace CompareContourScript
                     }
                 }
                 diceCoefficient = Math.Round(((2 * volumeIntersection) / (volumeStructure1 + volumeStructure2)), 3);
-                return diceCoefficient;
+                volChange = (volumeStructure2 - volumeStructure1) / volumeStructure1 * 100.0;
+                return (diceCoefficient, volChange);
             }
             else
             {
                 diceCoefficient = 1;
-                return diceCoefficient;
+                volChange = 0;
+                return (diceCoefficient, volChange);
             }
         }
 
