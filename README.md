@@ -1,7 +1,7 @@
-# ESAPI Dice Similarity Coefficient Calculator
+﻿# ESAPI Dice Similarity Coefficient Calculator
 
 ## Overview
-This ESAPI (Eclipse Scripting API) script calculates the **Dice Similarity Coefficient (DSC)** between structures with the same name across two structure sets on the **same planning CT**.  
+This ESAPI (Eclipse Scripting API) script calculates the **Dice Similarity Coefficient (DSC)** and **% volume change** relative to Structure 1 between structures with the same name across two structure sets on the **same planning CT**.  
 The DSC is a widely used metric for quantifying the spatial overlap between two volumes, where:
 - **1.0** indicates perfect agreement  
 - **0.0** indicates no overlap
@@ -9,7 +9,7 @@ The DSC is a widely used metric for quantifying the spatial overlap between two 
 The script:
 - Retrieves matching structures by name from the current patient’s active plan.
 - Computes intersection and union volumes by sampling points within their combined bounding boxes and checking 'volume.IsPointInside(x,y,z)'.
-- Calculates the DSC for each matching pair.
+- Calculates the DSC and % volume change for each matching pair.
 - Displays results in a table within the GUI.
 
 ## Safety
@@ -20,7 +20,7 @@ The script:
 
 ## Features
 - **Automatic structure matching** by name.
-- **Grid-based Dice calculation**.
+- **Grid-based Dice calculation and % volume change**.
 - **GUI table display** with scrollable, wrapped text.
 - **Retrieval of metadata** such as:
   - Patient name
@@ -38,31 +38,27 @@ The script:
    - Samples points within a grid inside the combined bounding box.
    - Checks if point is within both volumes (intersection) or one of the volumes.
    - Computes DSC by calculating number of points in intersection divided by number of points in both volumes.
+   - Computes % volume change by computing (volumeStructure1 - volumeStructure2) / volumeStructure1 * 100%
 3. Populates results into a table.
-4. Displays GUI, with option to sort by structure or DSC score.
+4. Displays GUI, with option to sort by structure or DSC score or % volume change.
 
 ## Example Output
-| Structure Name | DSC              | 
-|----------------|------------------|
-| Bladder        | 0.92             |
-| Rectum         | 0.89             |
+| Structure Name | DSC              | Vol Change (%)   | 
+|----------------|------------------|------------------|
+| Bladder        | 0.92             | 17.1             |
+| Rectum         | 0.89             | -9.1             |
 
 ## Usage
 1. Load the script in Eclipse under **Scripting**.
 2. Open a patient with a plan containing at least two relevant structure sets.
 3. Run the script from the scripting menu and select two structure sets.
-<<<<<<< HEAD
 4. View results in the displayed table or copy to Excel.
-=======
-4. View results in the displayed table or export to Excel.
->>>>>>> 3633b5c (Create README.md)
 
 ## Limitations
 - Only works when **both structure sets are on the same planning CT**.
 - Structures must have **exact same names** to be compared.
 - Requires ESAPI environment; cannot be run standalone.
 
-<<<<<<< HEAD
 ## Screenshots
 
 ### GUI Interface and Results Table
@@ -72,6 +68,7 @@ The script:
 | Version | Date       | Author  | Notes                                  |
 |---------|-----------|---------|----------------------------------------|
 | 1.0.0   | 2025-08-15 | PL Y    | Initial release with GUI and table |
+| 1.1.0   | 2025-08-25 | PL Y    | Added % vol change                 |
 
 ## Reporting Issues
 If you find a bug or have suggestions for improvement, please email:  
@@ -85,7 +82,3 @@ When reporting an issue, please include:
 
 ## License
 Internal research use only. Not for clinical use or commercial distribution.
-=======
-## License
-Internal clinical/research use only. Not for commercial distribution.
->>>>>>> 3633b5c (Create README.md)
